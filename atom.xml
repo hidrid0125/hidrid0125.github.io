@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://hidrid0125.github.io/blog/</id>
+    <id>https://hidrid0125.github.io</id>
     <title>Hidrir&apos;s blog</title>
-    <updated>2021-11-07T07:22:51.386Z</updated>
+    <updated>2021-11-07T07:26:56.927Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://hidrid0125.github.io/blog/"/>
-    <link rel="self" href="https://hidrid0125.github.io/blog/atom.xml"/>
+    <link rel="alternate" href="https://hidrid0125.github.io"/>
+    <link rel="self" href="https://hidrid0125.github.io/atom.xml"/>
     <subtitle>测试中，偶尔丢一点东西。</subtitle>
-    <logo>https://hidrid0125.github.io/blog/images/avatar.png</logo>
-    <icon>https://hidrid0125.github.io/blog/favicon.ico</icon>
+    <logo>https://hidrid0125.github.io/images/avatar.png</logo>
+    <icon>https://hidrid0125.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Hidrir&apos;s blog</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://hidrid0125.github.io/blog/post/hello-gridea/</id>
-        <link href="https://hidrid0125.github.io/blog/post/hello-gridea/">
+        <id>https://hidrid0125.github.io/post/hello-gridea/</id>
+        <link href="https://hidrid0125.github.io/post/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
