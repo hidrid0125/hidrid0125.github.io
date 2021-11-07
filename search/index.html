@@ -1,8 +1,8 @@
 <html>
   <head>
-  <meta charset="utf-8" />
+    <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>标签列表 | Hidrir&#39;s blog</title>
+<title>搜索结果 | Hidrir&#39;s blog</title>
 <meta name="description" content="测试中，偶尔丢一点东西。" />
 <link rel="shortcut icon" href="https://hidrid0125.github.io/blog//favicon.ico">
 <link rel="stylesheet" href="https://hidrid0125.github.io/blog//styles/main.css">
@@ -14,7 +14,12 @@
 <script src="https://hidrid0125.github.io/blog//media/js/view-image.min.js"></script>
 <script src="https://hidrid0125.github.io/blog//media/js/jquery.magnific-popup.min.js"></script>
 <script src="https://hidrid0125.github.io/blog//media/js/functions.js"></script>
-  </head>
+    <script src="/media/gridea-search/fuse.js"></script>
+    <script src="/media/gridea-search/ejs.min.js"></script>
+    <script src="/media/gridea-search/gridea-search.js"></script>
+    <script src="/media/gridea-search/result-template.ejs" type="text/ejs"></script>
+</head>
+
   <body>
     <!-- start: #wrapper -->
     <div class="wrapper">
@@ -85,20 +90,18 @@
         </div>
       </div>
 
-      <main id="tags" class="main fullcover no-sidebar content">
+      <main id="home" class="main fullcover no-sidebar content">
         <div class="grid-container module-wrapper enable-masonry aos-init aos-animate" data-aos="fade-up">
         <div class="epcl-page-wrapper">
           <div class="left-content grid-70 np-mobile widget_epcl_related_articles">
-
-          <div class="widget_tag_cloud tagcloud">
-            
-              <a href="https://hidrid0125.github.io/blog/tag/n6ZxKMNDV/" class="ctag ctag-0 ctag-n6ZxKMNDV" aria-label="">Gridea</a>
-            
+          <div class="main-article post">
+            <div id="gridea-search-result">
+              <h2 class="searching">搜索中......</h2>
+              <h2 class="no-result" style="display:none">未搜索到相关文章</h2>
+            </div>
+          </div>
           </div>
         </div>
-
-        </div>
-          </div>
         </div>
       </main>
 

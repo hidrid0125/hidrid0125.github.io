@@ -1,8 +1,9 @@
+<!doctype html>
 <html>
   <head>
-  <meta charset="utf-8" />
+    <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>标签列表 | Hidrir&#39;s blog</title>
+<title>我的观影 | Hidrir&#39;s blog</title>
 <meta name="description" content="测试中，偶尔丢一点东西。" />
 <link rel="shortcut icon" href="https://hidrid0125.github.io/blog//favicon.ico">
 <link rel="stylesheet" href="https://hidrid0125.github.io/blog//styles/main.css">
@@ -14,6 +15,9 @@
 <script src="https://hidrid0125.github.io/blog//media/js/view-image.min.js"></script>
 <script src="https://hidrid0125.github.io/blog//media/js/jquery.magnific-popup.min.js"></script>
 <script src="https://hidrid0125.github.io/blog//media/js/functions.js"></script>
+    <meta name="referrer" content="never">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iMuFeng/bmdb@1.8.0/dist/Bmdb.min.css">
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/iMuFeng/bmdb@1.8.0/dist/Bmdb.min.js'></script>
   </head>
   <body>
     <!-- start: #wrapper -->
@@ -85,23 +89,13 @@
         </div>
       </div>
 
-      <main id="tags" class="main fullcover no-sidebar content">
+      <main id="friends" class="main fullcover no-sidebar content">
         <div class="grid-container module-wrapper enable-masonry aos-init aos-animate" data-aos="fade-up">
         <div class="epcl-page-wrapper">
-          <div class="left-content grid-70 np-mobile widget_epcl_related_articles">
-
-          <div class="widget_tag_cloud tagcloud">
-            
-              <a href="https://hidrid0125.github.io/blog/tag/n6ZxKMNDV/" class="ctag ctag-0 ctag-n6ZxKMNDV" aria-label="">Gridea</a>
-            
-          </div>
+          <div class="section-content" style="margin-top:3em;"></div>
         </div>
-
-        </div>
-          </div>
         </div>
       </main>
-
         <footer id="footer" class="grid-container">
         <div class="widgets row gradient-effect">
             <div class="default-sidebar border-effect">
@@ -204,6 +198,15 @@
 
         
 
+    <script>
+    new Bmdb({
+      type: 'movies',
+      selector: '.section-content',
+      secret: '',
+      noMoreText: '没有更多数据了',
+      limit: 30
+    })
+    </script>
     </div>
     <!-- end: #wrapper -->
   </body>
