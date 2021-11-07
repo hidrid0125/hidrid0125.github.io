@@ -1,5 +1,5 @@
 /**
- * 由 宝硕(https://github.com/renbaoshuo) 修改自 https://github.com/tangkaichuan/gridea-search
+ * https://github.com/tangkaichuan/gridea-search
  */
 
 (function () {
@@ -14,14 +14,11 @@
                     return temp[1];
                 }
             }
-        } else {
-            return "";
         }
     }
 
     //获取解码后的搜索词
     function getQueryPhrase() {
-        if(window.location.href.indexOf('?') == -1) return "";
         var phrase = getParam(window.location.href, 'q');
         var queryPhrase = decodeURIComponent(phrase.replace(/\+/g, ' '));
         return queryPhrase;
@@ -54,8 +51,13 @@
     //模糊搜索 https://github.com/krisk/fuse
     function fuzzySearch(data, phrase) {
         var options = {
+            shouldSort: true,
             includeMatches: true,
-            ignoreLocation: true,
+            threshold: 0.5,
+            location: 0,
+            distance: 10000,
+            maxPatternLength: 32,
+            minMatchCharLength: 1,
             keys: [
                 'title',
                 'content'
@@ -64,7 +66,7 @@
         var fuse = new Fuse(data, options);
         var fuzzyResult = fuse.search(phrase);
         return fuzzyResult;
-    } 
+    }
 
     //检查缓存是否最新
     function checkCache() {
@@ -73,7 +75,7 @@
         caches.contents = JSON.parse(localStorage.getItem('ContentsCache'));
         if (caches.infos && caches.contents) {
             var cachedTime = caches.infos.utils.now.toString();
-            var updateTime = document.getElementById('gridea-search-result').getAttribute('data-update');
+            var updateTime = document.getElementById('gridea-search-form').getAttribute('data-update');
             if (cachedTime === updateTime) {
                 return caches;
             }
@@ -91,7 +93,7 @@
         }
         else {
             ajax({
-                url: '../api-content/index.html' + "?_=" + Date.now(),
+                url: '/api-content/index.html',
                 success: function (data) {
                     callback(JSON.parse(data));
                     localStorage.setItem('ContentsCache', data);
@@ -108,7 +110,7 @@
         }
         else {
             ajax({
-                url: '../api-info/index.html' + "?_=" + Date.now(),
+                url: '/api-info/index.html',
                 success: function (data) {
                     callback(JSON.parse(data));
                     localStorage.setItem('InfosCache', data);
@@ -176,32 +178,32 @@
     //搜索结果关键字高亮
     function keywordHighlight(searchedContent) {
         var searchedPostContent = searchedContent.item.content;//搜索结果内容预览
-        var preview = '... ';
+        var preview = '';
         for (var i = 0; i < searchedContent.matches.length; i++) {
             if (searchedContent.matches[i].key === 'content') {//如果匹配到文章内容，截取关键字
                 var indices = searchedContent.matches[i].indices[0];
-                var beforeKeyword = searchedPostContent.substring(indices[0] - 20, indices[0]);//关键字前10字
+                var beforeKeyword = searchedPostContent.substring(indices[0] - 10, indices[0]);//关键字前10字
                 var keyword = searchedPostContent.substring(indices[0], indices[1] + 1);//关键字
-                var afterKeyword = searchedPostContent.substring(indices[1] + 1, indices[1] + 120);//关键字后70字
+                var afterKeyword = searchedPostContent.substring(indices[1] + 1, indices[1] + 70);//关键字后70字
                 preview = beforeKeyword + '<span class="searched-keyword">'
                     + keyword + '</span>' + afterKeyword;
             } else {//没有匹配到文章内容，则是标题，直接截取前80字
                 preview = searchedPostContent.substring(0, 80);
             }
         }
-        return preview + ' ...';
+        return preview + '...';
     }
 
     //循环匹配搜索到的内容与展示信息
     function getResult(infos, searchedContents) {
         var searchedInfos = JSON.parse(JSON.stringify(infos));//对象深拷贝
         searchedInfos.posts = [];
-        for (var i = 0; i < searchedContents.length; i++) {
-            for (var j = 0; j < infos.posts.length; j++) {
-                if (searchedContents[i].item.link === infos.posts[j].link) {
-                    infos.posts[j].searchedPreview = keywordHighlight(searchedContents[i]);// 预览关键字高亮
-                    infos.posts[j].content = searchedContents[i].item.content;// content注入
-                    searchedInfos.posts.push(infos.posts[j]);// push到所需结果中
+        for (var i = 0; i < infos.posts.length; i++) {
+            for (var j = 0; j < searchedContents.length; j++) {
+                if (searchedContents[j].item.link === infos.posts[i].link) {
+                    infos.posts[i].searchedPreview = keywordHighlight(searchedContents[j]);//预览关键字高亮
+                    infos.posts[i].content = searchedContents[j].item.content;//content注入
+                    searchedInfos.posts.push(infos.posts[i]);//push到所需结果中
                 }
             }
         }
@@ -213,8 +215,8 @@
         //搜索结果回调
         var resultHandler = function (searchedContents) {
             getInfos(function (infos) {
-                // console.log(infos);
-                // console.log(searchedContents);
+                //console.log(infos);
+                //console.log(searchedContents);
                 var searchedInfos = getResult(infos, searchedContents);
                 renderResult(searchedInfos);
             });
