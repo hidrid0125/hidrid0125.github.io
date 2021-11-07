@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://blog.hidrir.top</id>
+    <id>https://blog.hidrir.top</id>
     <title>Hidrir&apos;s blog</title>
-    <updated>2021-11-07T08:07:54.972Z</updated>
+    <updated>2021-11-07T08:13:22.436Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://blog.hidrir.top"/>
-    <link rel="self" href="http://blog.hidrir.top/atom.xml"/>
+    <link rel="alternate" href="https://blog.hidrir.top"/>
+    <link rel="self" href="https://blog.hidrir.top/atom.xml"/>
     <subtitle>测试中，偶尔丢一点东西。</subtitle>
-    <logo>http://blog.hidrir.top/images/avatar.png</logo>
-    <icon>http://blog.hidrir.top/favicon.ico</icon>
+    <logo>https://blog.hidrir.top/images/avatar.png</logo>
+    <icon>https://blog.hidrir.top/favicon.ico</icon>
     <rights>All rights reserved 2021, Hidrir&apos;s blog</rights>
     <entry>
         <title type="html"><![CDATA[一个测试文档]]></title>
-        <id>http://blog.hidrir.top/post/yi-ge-ce-shi-wen-dang/</id>
-        <link href="http://blog.hidrir.top/post/yi-ge-ce-shi-wen-dang/">
+        <id>https://blog.hidrir.top/post/yi-ge-ce-shi-wen-dang/</id>
+        <link href="https://blog.hidrir.top/post/yi-ge-ce-shi-wen-dang/">
         </link>
         <updated>2021-11-07T07:34:03.000Z</updated>
         <summary type="html"><![CDATA[<p>什么都没有</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>什么都没有</p>
 <!-- more -->
-<figure data-type="image" tabindex="1"><img src="http://blog.hidrir.top/post-images/1636270516657.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://blog.hidrir.top/post-images/1636270516657.jpg" alt="" loading="lazy"></figure>
 ]]></content>
     </entry>
 </feed>
