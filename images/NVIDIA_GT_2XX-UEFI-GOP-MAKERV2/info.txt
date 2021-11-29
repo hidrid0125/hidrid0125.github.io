@@ -1,0 +1,42 @@
+Image 1 -- Offset 0x0
+  ROM header contents
+    Signature              0xAA55
+    PCIR offset            0x0188
+    Signature               PCIR
+    Vendor ID               0x10DE
+    Device ID               0x0CA3
+    Length                  0x0018
+    Revision                0x0000
+    DeviceListOffset        0x00
+    Class Code              0x030000
+    Image size              0xF200
+    Code revision:          0x0001
+    MaxRuntimeImageLength   0x00
+    ConfigUtilityCodeHeaderOffset 0x5948
+    DMTFCLPEntryPointOffset 0x2442
+    Indicator               0x00
+    Code type               0x00
+Image 2 -- Offset 0xF200
+  ROM header contents
+    Signature              0xAA55
+    PCIR offset            0x001C
+    Signature               PCIR
+    Vendor ID               0x10DE
+    Device ID               0x0CA3
+    Length                  0x001C
+    Revision                0x0003
+    DeviceListOffset        0x00
+    Class Code              0x030000
+    Image size              0xF400
+    Code revision:          0x0000
+    MaxRuntimeImageLength   0x00
+    ConfigUtilityCodeHeaderOffset 0x00
+    DMTFCLPEntryPointOffset 0x00
+    Indicator               0x80   (last image)
+    Code type               0x03   (EFI image)
+  EFI ROM header contents
+    EFI Signature          0x0EF1
+    Compression Type       0x0001 (compressed)
+    Machine type           0x8664 (unknown)
+    Subsystem              0x000B (EFI boot service driver)
+    EFI image offset       0x0038 (@0xF238)
