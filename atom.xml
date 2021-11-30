@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.hidrir.top</id>
     <title>Hidrir&apos;s blog</title>
-    <updated>2021-11-29T11:04:22.196Z</updated>
+    <updated>2021-11-30T14:09:06.159Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.hidrir.top"/>
     <link rel="self" href="https://blog.hidrir.top/atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>https://blog.hidrir.top/images/avatar.png</logo>
     <icon>https://blog.hidrir.top/favicon.ico</icon>
     <rights>All rights reserved 2021, Hidrir&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[今日份收获]]></title>
+        <id>https://blog.hidrir.top/post/jin-ri-fen-shou-huo/</id>
+        <link href="https://blog.hidrir.top/post/jin-ri-fen-shou-huo/">
+        </link>
+        <updated>2021-11-30T14:05:16.000Z</updated>
+        <summary type="html"><![CDATA[<p>勉强写了个极其基础的玩意<br>
+我太菜了</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>勉强写了个极其基础的玩意<br>
+我太菜了</p>
+<!-- more -->
+<figure data-type="image" tabindex="1"><img src="https://blog.hidrir.top/post-images/1638281280631.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[C 从入门到入土]]></title>
         <id>https://blog.hidrir.top/post/c-cong-ru-men-dao-ru-tu/</id>
