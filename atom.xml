@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hidrid0125.github.io</id>
+    <title>Hidrir&apos;s blog</title>
+    <updated>2024-12-28T11:01:37.216Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hidrid0125.github.io"/>
+    <link rel="self" href="https://hidrid0125.github.io/atom.xml"/>
+    <logo>https://hidrid0125.github.io/images/avatar.png</logo>
+    <icon>https://hidrid0125.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2024, Hidrir&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[12-28]]></title>
+        <id>https://hidrid0125.github.io/post/12-28/</id>
+        <link href="https://hidrid0125.github.io/post/12-28/">
+        </link>
+        <updated>2024-12-28T10:27:03.000Z</updated>
+        <content type="html"><![CDATA[<p>内容已清除</p>
+]]></content>
+    </entry>
+</feed>
